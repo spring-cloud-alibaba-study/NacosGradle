@@ -1,0 +1,8 @@
+rootProject.name = 'NacosGradle'
+include(':common')
+include(':gateway-service')
+include(':operation-api')
+include(':operation-service')
+include(':user-service')
+include(':user-api')
+include(':scheduled-service')

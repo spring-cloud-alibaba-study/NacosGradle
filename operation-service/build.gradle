@@ -1,0 +1,13 @@
+dependencies {
+    implementation 'org.redisson:redisson-spring-boot-starter:3.16.0'
+    implementation project(':common')
+    implementation project(':user-api')
+    implementation project(':operation-api')
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:2.2.1.RELEASE'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-dubbo'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+}
+
+description = 'operation'

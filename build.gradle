@@ -41,6 +41,7 @@ subprojects {
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
     version = "1.0.0-SNAPSHOT"  // 开发版本： -SNAPSHOT 正式版本：.RELEASE
     dependencies {
+        implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.3'
         implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.2'
         implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:3.0.3'
         implementation 'cn.hutool:hutool-all:5.7.8'

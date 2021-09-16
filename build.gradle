@@ -1,0 +1,65 @@
+buildscript {
+    // 定义变量
+    ext {
+        springBootVersion = '2.5.4'
+        springCloudAlibabaVersion = '2021.1'
+        ALI_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public/'
+    }
+    // 仓库地址
+    repositories {
+        // 先从阿里云maven仓库中去下载，没有再去maven中央仓库
+        maven {
+            url ALI_REPOSITORY_URL
+        }
+        mavenCentral()
+
+    }
+    // 构建时所需要的插件或者是其他的依赖
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+
+}
+// 所有模块的总仓库地址
+allprojects {
+    // 在build.gradle文件中直接声明的依赖项、仓库地址等信息是项目自身需要的资源。
+    repositories {
+        maven {
+            url ALI_REPOSITORY_URL
+        }
+    }
+}
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'war';
+    apply plugin: 'idea'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    // 指定编码格式
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+    version = "1.0.0-SNAPSHOT"  // 开发版本： -SNAPSHOT 正式版本：.RELEASE
+    dependencies {
+        implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.2'
+        implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:3.0.3'
+        implementation 'cn.hutool:hutool-all:5.7.8'
+        implementation 'com.alibaba:fastjson:1.2.78'
+        implementation 'io.springfox:springfox-boot-starter:3.0.0'
+        implementation 'org.apache.commons:commons-lang3:3.12.0'
+        implementation 'io.github.openfeign:feign-okhttp:11.6'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2020.0.3'
+        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+        implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+        //lombok的jar包
+        implementation 'org.projectlombok:lombok:1.18.10'
+        annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+    }
+    dependencyManagement {
+        imports {
+            mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+
+
+dependencies {
+    implementation project(':common')
+    implementation project(':user-api')
+    implementation project(':operation-api')
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz'
+    implementation 'mysql:mysql-connector-java:8.0.21'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+}
+
+description = 'scheduled-service'

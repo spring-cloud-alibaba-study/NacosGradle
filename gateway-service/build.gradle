@@ -1,0 +1,10 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-reactor-netty'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.2'
+    implementation 'org.springframework.cloud:spring-cloud-loadbalancer:3.0.2'
+    implementation 'org.springframework.cloud:spring-cloud-starter-gateway:3.0.2'
+}
+
+description = 'gateway'

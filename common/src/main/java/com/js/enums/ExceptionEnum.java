@@ -1,9 +1,17 @@
 package com.js.enums;
 
+<<<<<<< HEAD
 import lombok.Getter;
 
 @Getter
 public enum ExceptionEnum {
+=======
+import com.js.intefaces.ErrorTypeException;
+import lombok.Getter;
+
+@Getter
+public enum ExceptionEnum implements ErrorTypeException {
+>>>>>>> eab20c85b67d73fc7c47934786bf717d04e3fa7c
     /**
      * 通用异常信息ErrorType
      **/

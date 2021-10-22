@@ -45,10 +45,6 @@ public class BaseResponse<T> {
         return build(StatusCode.SUCCESS.getCode(), StatusCode.SUCCESS.getMsg(), null);
     }
 
-    public static <T> BaseResponse<T> buildSuccess(String message) {
-        return build(StatusCode.SUCCESS.getCode(), message, null);
-    }
-
     public static <T> BaseResponse<T> buildSuccess(String message, T data) {
         return build(StatusCode.SUCCESS.getCode(), message, data);
     }

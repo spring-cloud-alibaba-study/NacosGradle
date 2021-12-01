@@ -4,6 +4,7 @@ import com.js.distributed.DistributedRedisLock;
 import com.js.dubbo.TestDubboService;
 import com.js.enums.ExceptionEnum;
 import com.js.exception.SystemException;
+import com.js.feignclient.UserTestProxy;
 import com.js.response.BaseResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +29,13 @@ public class TestController {
     @Autowired
     private DistributedRedisLock distributedRedisLock;
 
+    @Autowired
+    private UserTestProxy userTestProxy;
+
     @GetMapping("/test")
     public BaseResponse<String> getString() {
-        log.info("进入消费者");
         try {
+            log.info("进入消费者{}", userTestProxy.test("test"));
             if (distributedRedisLock.tryLock("TestLog", 0, 2000, TimeUnit.SECONDS)) {
                 log.info("获取分布式锁成功");
                 return BaseResponse.buildSuccess(testDubboService.sayHello("test1"));

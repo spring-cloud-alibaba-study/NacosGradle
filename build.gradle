@@ -52,6 +52,7 @@ subprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2020.0.3'
         implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+        implementation 'org.springframework.cloud:spring-cloud-loadbalancer:3.0.4'
         implementation 'com.squareup.okhttp3:okhttp:4.9.1'
         //lombok的jar包
         implementation 'org.projectlombok:lombok:1.18.10'

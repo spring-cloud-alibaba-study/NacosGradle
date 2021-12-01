@@ -1,2 +1,6 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
 jar.enabled = true
 description = 'user-api'

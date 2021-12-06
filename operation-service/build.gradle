@@ -1,0 +1,13 @@
+
+dependencies {
+    implementation 'org.redisson:redisson-spring-boot-starter:3.16.4'
+    implementation project(':common')
+    implementation project(':user-api')
+    implementation project(':operation-api')
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-dubbo:2021.1'
+}
+jar.enabled = true
+description = 'operation'

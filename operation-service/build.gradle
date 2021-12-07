@@ -1,6 +1,5 @@
 dependencies {
     implementation 'org.redisson:redisson-spring-boot-starter:3.16.0'
-    implementation 'de.ruedigermoeller:fst:2.57'
     implementation project(':common')
     implementation project(':user-api')
     implementation project(':operation-api')

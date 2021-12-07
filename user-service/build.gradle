@@ -3,7 +3,6 @@ dependencies {
     implementation project(':user-api')
     implementation project(':operation-api')
     implementation 'org.redisson:redisson-spring-boot-starter:3.16.0'
-    implementation 'de.ruedigermoeller:fst:2.57'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'

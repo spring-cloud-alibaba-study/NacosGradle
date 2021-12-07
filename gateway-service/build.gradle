@@ -1,7 +1,7 @@
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-reactor-netty'
-    implementation 'org.springframework.cloud:spring-cloud-starter-gateway:2.2.6.RELEASE'
+    implementation ("org.springframework.cloud:spring-cloud-starter-gateway:$springCloudVersion")
 }
 
 description = 'gateway'

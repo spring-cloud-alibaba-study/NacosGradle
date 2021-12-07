@@ -3,9 +3,8 @@ dependencies {
     implementation project(':user-api')
     implementation project(':operation-api')
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:2.2.2.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'org.springframework.boot:spring-boot-starter-quartz'
+    implementation 'org.springframework.boot:spring-boot-starter-quartz:2.3.4.RELEASE'
     implementation 'mysql:mysql-connector-java:8.0.21'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
 }

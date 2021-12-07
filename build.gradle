@@ -3,6 +3,7 @@ buildscript {
     ext {
         springBootVersion = '2.2.0.RELEASE'
         springCloudAlibabaVersion = '2.2.2.RELEASE'
+        springCloudVersion = '2.2.1.RELEASE'
         ALI_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public/'
     }
     // 仓库地址
@@ -47,12 +48,14 @@ subprojects {
         implementation 'io.springfox:springfox-boot-starter:3.0.0'
         implementation 'org.apache.commons:commons-lang3:3.12.0'
         implementation 'io.github.openfeign:feign-okhttp:11.6'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
         implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
         implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-        //lombok的jar包
-        implementation 'org.projectlombok:lombok:1.18.10'
-        annotationProcessor 'org.projectlombok:lombok:1.18.10'
+        testImplementation ("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+        implementation ("org.springframework.cloud:spring-cloud-starter-openfeign:$springCloudVersion")
+        compileOnly 'org.projectlombok:lombok:1.18.20'
+        implementation 'org.projectlombok:lombok:1.18.20'
+        annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
 
     }
     dependencyManagement {

@@ -3,6 +3,8 @@ buildscript {
     ext {
         springBootVersion = '2.5.4'
         springCloudAlibabaVersion = '2021.1'
+        springCloudVersion = '3.0.4'
+
         ALI_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public/'
     }
     // 仓库地址
@@ -41,22 +43,26 @@ subprojects {
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
     version = "1.0.0-SNAPSHOT"  // 开发版本： -SNAPSHOT 正式版本：.RELEASE
     dependencies {
-        implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.3'
-        implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.0.2'
+
+        testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
+        implementation("org.springframework.cloud:spring-cloud-starter-openfeign:$springCloudVersion")
+        implementation("org.springframework.cloud:spring-cloud-starter-bootstrap:$springCloudVersion")
+        implementation("org.springframework.cloud:spring-cloud-loadbalancer:$springCloudVersion")
+        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+
+
         implementation 'com.github.xiaoymin:knife4j-spring-boot-starter:3.0.3'
         implementation 'cn.hutool:hutool-all:5.7.8'
         implementation 'com.alibaba:fastjson:1.2.78'
         implementation 'io.springfox:springfox-boot-starter:3.0.0'
         implementation 'org.apache.commons:commons-lang3:3.12.0'
         implementation 'io.github.openfeign:feign-okhttp:11.6'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
         runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2020.0.3'
-        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
-        implementation 'org.springframework.cloud:spring-cloud-loadbalancer:3.0.4'
         implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-        //lombok的jar包
-        implementation 'org.projectlombok:lombok:1.18.10'
-        annotationProcessor 'org.projectlombok:lombok:1.18.10'
+        implementation 'io.github.openfeign:feign-okhttp:11.2'
+        compileOnly 'org.projectlombok:lombok:1.18.20'
+        implementation 'org.projectlombok:lombok:1.18.20'
+        annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
     }
     dependencyManagement {

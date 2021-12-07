@@ -42,11 +42,11 @@ subprojects {
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
     version = "1.0.0-SNAPSHOT"  // 开发版本： -SNAPSHOT 正式版本：.RELEASE
     dependencies {
-        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2021.1'
-        implementation 'org.springframework.cloud:spring-cloud-loadbalancer:3.1.0'
-        implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:3.1.0'
-        implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.1.0'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.0'
+        implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+        implementation ("org.springframework.cloud:spring-cloud-loadbalancer:$springCloudVersion")
+        implementation ("org.springframework.cloud:spring-cloud-starter-bootstrap:$springCloudVersion")
+        implementation ("org.springframework.cloud:spring-cloud-starter-openfeign:$springCloudVersion")
+        testImplementation ("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
         implementation 'com.squareup.okhttp3:okhttp:4.9.1'
         implementation 'com.alibaba:fastjson:1.2.78'
         implementation 'io.springfox:springfox-swagger-ui:2.10.5'
@@ -59,6 +59,7 @@ subprojects {
         //lombok的jar包
         implementation 'org.projectlombok:lombok:1.18.10'
         annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
 
     }
     dependencyManagement {

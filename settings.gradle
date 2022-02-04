@@ -1,4 +1,4 @@
-rootProject.name = 'NacosMaven'
+rootProject.name = 'NacosGradle'
 include(':common')
 include(':gateway-service')
 include(':operation-api')

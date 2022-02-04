@@ -7,6 +7,7 @@ buildscript {
         ALI_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public/'
         OK_HTTP_VERSION = "4.9.3"
         DUBBO_VERSION = "3.0.5"
+        ZK_VERSION = "3.7.0"
     }
     // 仓库地址
     repositories {
@@ -62,6 +63,8 @@ subprojects {
         annotationProcessor 'org.projectlombok:lombok:1.18.20'
         implementation ("org.apache.dubbo:dubbo-spring-boot-starter:$DUBBO_VERSION")
         implementation ("org.apache.dubbo:dubbo-dependencies-zookeeper:$DUBBO_VERSION")
+        implementation ("org.apache.dubbo:dubbo:$DUBBO_VERSION")
+        implementation ("org.apache.zookeeper:zookeeper:$ZK_VERSION")
     }
     dependencyManagement {
         imports {

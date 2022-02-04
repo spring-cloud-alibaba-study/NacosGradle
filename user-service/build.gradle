@@ -8,6 +8,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     implementation 'org.apache.dubbo:dubbo-spring-boot-starter'
     implementation 'org.apache.dubbo:dubbo-dependencies-zookeeper'
+    implementation 'org.apache.dubbo:dubbo'
+    implementation 'org.apache.zookeeper:zookeeper'
 }
 
 description = 'user-service'

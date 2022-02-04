@@ -1,10 +1,12 @@
 buildscript {
     // 定义变量
     ext {
-        springBootVersion = '2.6.0'
+        springBootVersion = '2.6.3'
         springCloudAlibabaVersion = '2021.1'
         springCloudVersion = '3.1.0'
         ALI_REPOSITORY_URL = 'https://maven.aliyun.com/repository/public/'
+        OK_HTTP_VERSION = "4.9.3"
+        DUBBO_VERSION = "3.0.5"
     }
     // 仓库地址
     repositories {
@@ -47,7 +49,7 @@ subprojects {
         implementation ("org.springframework.cloud:spring-cloud-starter-bootstrap:$springCloudVersion")
         implementation ("org.springframework.cloud:spring-cloud-starter-openfeign:$springCloudVersion")
         testImplementation ("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
-        implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+        implementation ("com.squareup.okhttp3:okhttp:$OK_HTTP_VERSION")
         implementation 'com.alibaba:fastjson:1.2.78'
         implementation 'io.springfox:springfox-swagger-ui:2.10.5'
         implementation 'io.springfox:springfox-swagger2:2.10.5'
@@ -58,6 +60,8 @@ subprojects {
         compileOnly 'org.projectlombok:lombok:1.18.20'
         implementation 'org.projectlombok:lombok:1.18.20'
         annotationProcessor 'org.projectlombok:lombok:1.18.20'
+        implementation ("org.apache.dubbo:dubbo-spring-boot-starter:$DUBBO_VERSION")
+        implementation ("org.apache.dubbo:dubbo-dependencies-zookeeper:$DUBBO_VERSION")
     }
     dependencyManagement {
         imports {

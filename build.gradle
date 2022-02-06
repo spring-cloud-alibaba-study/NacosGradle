@@ -61,21 +61,18 @@ subprojects {
         compileOnly 'org.projectlombok:lombok:1.18.22'
         implementation 'org.projectlombok:lombok:1.18.22'
         annotationProcessor 'org.projectlombok:lombok:1.18.22'
-        implementation("org.apache.dubbo:dubbo-spring-boot-starter:$DUBBO_VERSION")
-        implementation("org.apache.dubbo:dubbo-dependencies-zookeeper:$DUBBO_VERSION") {
-            exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-        }
-        implementation("org.apache.dubbo:dubbo:$DUBBO_VERSION") {
-            exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-        }
-        implementation("org.apache.zookeeper:zookeeper:$ZK_VERSION") {
-            exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-        }
     }
     dependencyManagement {
         imports {
             mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
         }
+        dependencies {
+            dependency("org.apache.dubbo:dubbo-spring-boot-starter:$DUBBO_VERSION")
+            dependency("org.apache.dubbo:dubbo-dependencies-zookeeper:$DUBBO_VERSION")
+            dependency("org.apache.dubbo:dubbo:$DUBBO_VERSION")
+            dependency("org.apache.zookeeper:zookeeper:$ZK_VERSION")
+        }
+
     }
 }
 

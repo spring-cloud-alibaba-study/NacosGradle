@@ -3,6 +3,10 @@ dependencies {
     implementation project(':common')
     implementation project(':user-api')
     implementation project(':operation-api')
+    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    implementation("org.springframework.cloud:spring-cloud-loadbalancer")
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'

@@ -6,7 +6,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-quartz'
     implementation 'mysql:mysql-connector-java:8.0.21'
-    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    implementation("org.springframework.cloud:spring-cloud-loadbalancer")
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 }
 
 description = 'scheduled-service'

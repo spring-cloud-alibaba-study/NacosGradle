@@ -7,6 +7,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-quartz:2.3.4.RELEASE'
     implementation 'mysql:mysql-connector-java:8.0.21'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-seata'
 }
 
 description = 'scheduled-service'

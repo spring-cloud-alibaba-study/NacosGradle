@@ -57,7 +57,7 @@ subprojects {
         implementation("cn.hutool:hutool-all:$hutoolVersion")
         implementation("org.apache.commons:commons-lang3:$apacheLangVersion")
         implementation 'io.github.openfeign:feign-okhttp:11.5'
-        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2021.0.0'
+        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2021.0.1'
         compileOnly("org.projectlombok:lombok:$lombokVersion")
         implementation("org.projectlombok:lombok:$lombokVersion")
         annotationProcessor("org.projectlombok:lombok:$lombokVersion")

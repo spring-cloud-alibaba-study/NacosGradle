@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: scheduled-service
+server:
+  port: 9090

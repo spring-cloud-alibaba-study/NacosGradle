@@ -1,5 +1,5 @@
 dependencies {
-    implementation 'org.redisson:redisson-spring-boot-starter:3.16.4'
+    implementation 'org.redisson:redisson-spring-boot-starter'
     implementation project(':common')
     implementation project(':user-api')
     implementation project(':operation-api')
@@ -10,15 +10,5 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-    implementation 'org.apache.dubbo:dubbo-spring-boot-starter'
-    implementation("org.apache.dubbo:dubbo-dependencies-zookeeper") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
-    implementation("org.apache.dubbo:dubbo") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
-    implementation("org.apache.zookeeper:zookeeper") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
 }
 description = 'operation'

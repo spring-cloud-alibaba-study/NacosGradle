@@ -2,16 +2,15 @@ buildscript {
     // 定义变量
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
-        springBootVersion = "2.6.3"
+        springBootVersion = "2.6.4"
         springCloudAlibabaVersion = "2021.1"
-        springCloudVersion = "3.1.0"
+        springCloudVersion = "3.1.1"
         okHttpVersion = "4.9.3"
-        dubboVersion = "3.0.5"
-        zkVersion = "3.7.0"
         swaggerVersion = "2.10.5"
         hutoolVersion = "5.7.20"
         apacheLangVersion = "3.12.0"
         lombokVersion = "1.18.22"
+        redssionVersion = "3.16.8"
     }
     // 仓库地址
     repositories {
@@ -67,15 +66,11 @@ subprojects {
             mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
         }
         dependencies {
-            dependency("org.apache.dubbo:dubbo-spring-boot-starter:$dubboVersion")
-            dependency("org.apache.dubbo:dubbo-dependencies-zookeeper:$dubboVersion")
-            dependency("org.apache.dubbo:dubbo:$dubboVersion")
-            dependency("org.apache.zookeeper:zookeeper:$zkVersion")
             dependency("org.springframework.cloud:spring-cloud-loadbalancer:$springCloudVersion")
             dependency("org.springframework.cloud:spring-cloud-starter-bootstrap:$springCloudVersion")
             dependency("org.springframework.cloud:spring-cloud-starter-openfeign:$springCloudVersion")
-            dependency ("org.springframework.cloud:spring-cloud-starter-gateway:$springCloudVersion")
-
+            dependency("org.springframework.cloud:spring-cloud-starter-gateway:$springCloudVersion")
+            dependency("org.redisson:redisson-spring-boot-starter:$redssionVersion")
         }
 
     }

@@ -6,20 +6,10 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-loadbalancer")
     implementation("org.springframework.cloud:spring-cloud-starter-bootstrap")
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
-    implementation 'org.redisson:redisson-spring-boot-starter:3.16.0'
+    implementation 'org.redisson:redisson-spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-    implementation 'org.apache.dubbo:dubbo-spring-boot-starter'
-    implementation("org.apache.dubbo:dubbo-dependencies-zookeeper") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
-    implementation("org.apache.dubbo:dubbo") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
-    implementation("org.apache.zookeeper:zookeeper") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
 }
 
 description = 'user-service'

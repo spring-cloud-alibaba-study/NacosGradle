@@ -2,12 +2,12 @@ buildscript {
     // 定义变量
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
-        springBootVersion = "2.6.6"
+        springBootVersion = "2.7.0"
         springCloudAlibabaVersion = "2021.1"
-        springCloudVersion = "3.1.1"
+        springCloudVersion = "3.1.2"
         okHttpVersion = "4.9.3"
-        swaggerVersion = "2.10.5"
-        hutoolVersion = "5.7.20"
+        swaggerVersion = "3.0.0"
+        hutoolVersion = "5.1.1"
         apacheLangVersion = "3.12.0"
         lombokVersion = "1.18.22"
         redssionVersion = "3.16.8"
@@ -50,13 +50,13 @@ subprojects {
     dependencies {
         testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
         implementation("com.squareup.okhttp3:okhttp:$okHttpVersion")
-        implementation 'com.alibaba:fastjson:1.2.79'
+        implementation 'com.alibaba:fastjson:2.0.3'
         implementation("io.springfox:springfox-swagger-ui:$swaggerVersion")
         implementation("io.springfox:springfox-swagger2:$swaggerVersion")
         implementation("cn.hutool:hutool-all:$hutoolVersion")
         implementation("org.apache.commons:commons-lang3:$apacheLangVersion")
-        implementation 'io.github.openfeign:feign-okhttp:11.5'
-        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2021.0.1'
+        implementation 'io.github.openfeign:feign-okhttp:11.8'
+        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2021.0.2'
         compileOnly("org.projectlombok:lombok:$lombokVersion")
         implementation("org.projectlombok:lombok:$lombokVersion")
         annotationProcessor("org.projectlombok:lombok:$lombokVersion")

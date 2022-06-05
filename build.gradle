@@ -50,7 +50,7 @@ subprojects {
     dependencies {
         testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
         implementation("com.squareup.okhttp3:okhttp:$okHttpVersion")
-        implementation 'com.alibaba:fastjson:2.0.3'
+        implementation 'com.alibaba.fastjson2:fastjson2-extension:2.0.5'
         implementation("io.springfox:springfox-swagger-ui:$swaggerVersion")
         implementation("io.springfox:springfox-swagger2:$swaggerVersion")
         implementation("cn.hutool:hutool-all:$hutoolVersion")

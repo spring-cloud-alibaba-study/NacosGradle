@@ -1,6 +1,6 @@
 package com.js.util.httpclient;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSON;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -62,7 +62,7 @@ public class OkHttpClientUtil {
      * @return
      */
     public static String postForObject(String url, Object obj) {
-        Call call = createPostJsonCall(url, JSONObject.toJSONString(obj));
+        Call call = createPostJsonCall(url, JSON.toJSONString(obj));
         return execute(call);
     }
 
@@ -108,7 +108,7 @@ public class OkHttpClientUtil {
      * @param obj 请求对象
      */
     public static void postForObjectAsync(String url, Object obj, Callback callback) {
-        Call call = createPostJsonCall(url, JSONObject.toJSONString(obj));
+        Call call = createPostJsonCall(url, JSON.toJSONString(obj));
         call.enqueue(callback);
     }
 

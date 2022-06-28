@@ -43,7 +43,7 @@ public class TestController {
             log.info("获取分布式锁失败");
             return BaseResponse.buildFail(ExceptionEnum.NO_REPEAT_CLICK);
         } catch (Exception e) {
-            log.error("调用dubbo出现异常", e);
+            log.error("调用出现异常", e);
             throw new SystemException(e.getMessage());
         } finally {
             distributedRedisLock.unlock("TestLog");

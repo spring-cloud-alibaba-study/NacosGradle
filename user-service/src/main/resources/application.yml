@@ -35,5 +35,5 @@ feign:
     enabled: true
   httpclient:
     enabled: false
-log4j:
-  ignoreTCL: true
+#log4j:
+#  ignoreTCL: true

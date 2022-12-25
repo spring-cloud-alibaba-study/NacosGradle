@@ -35,12 +35,6 @@ public class RedisConfig {
 
         //使用Jackson2JsonRedisSerializer来序列化和反序列化redis的value值
         Jackson2JsonRedisSerializer serializer = new Jackson2JsonRedisSerializer(Object.class);
-
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-//        mapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
-        serializer.setObjectMapper(mapper);
-
         template.setValueSerializer(serializer);
         //使用StringRedisSerializer来序列化和反序列化redis的key值
         template.setKeySerializer(new StringRedisSerializer());
@@ -48,13 +42,6 @@ public class RedisConfig {
         template.setHashValueSerializer(serializer);
         template.afterPropertiesSet();
         return template;
-    }
-
-    @Bean(value = "redissonClient")
-    public RedissonClient redissonClient() throws IOException {
-        RedissonClient redisson = Redisson.create(
-                Config.fromYAML(new ClassPathResource("application-redisson.yml").getInputStream()));
-        return redisson;
     }
 
 

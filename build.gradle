@@ -3,7 +3,7 @@ buildscript {
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
         springBootVersion = "3.0.0"
-        springCloudAlibabaVersion = "2021.1"
+        springCloudAlibabaVersion = "2022.0.0.0-RC1"
         springCloudVersion = "4.0.0"
         okHttpVersion = "4.10.0"
         swaggerVersion = "3.0.0"
@@ -60,6 +60,7 @@ subprojects {
         compileOnly("org.projectlombok:lombok:${lombokVersion}")
         implementation("org.projectlombok:lombok:${lombokVersion}")
         annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+        implementation ('com.google.guava:guava:31.1-jre')
     }
     dependencyManagement {
         imports {

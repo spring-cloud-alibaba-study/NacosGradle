@@ -35,7 +35,7 @@ public class GlobalGatewayExceptionHandler implements ErrorWebExceptionHandler {
 
     @Override
     public Mono<Void> handle(ServerWebExchange exchange, Throwable throwable) {
-        Map result = new HashMap();
+        Map result = new HashMap(8);
         result.put("code", "503");
         result.put("message", "网络连接超时，请稍后再试");
         threadLocal.set(result);

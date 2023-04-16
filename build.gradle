@@ -2,14 +2,15 @@ buildscript {
     // 定义变量
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
-        springBootVersion = "3.0.0"
+        springBootVersion = "3.0.5"
         springCloudAlibabaVersion = "2022.0.0.0-RC1"
-        springCloudVersion = "4.0.0"
+        springCloudVersion = "4.0.2"
         okHttpVersion = "4.10.0"
-        hutoolVersion = "5.8.8"
+        hutoolVersion = "5.8.17"
         apacheLangVersion = "3.12.0"
-        lombokVersion = "1.18.22"
-        redssionVersion = "3.19.0"
+        lombokVersion = "1.18.26"
+        redssionVersion = "3.20.1"
+        fastjsonVersion = "2.0.27"
     }
     // 仓库地址
     repositories {
@@ -49,7 +50,7 @@ subprojects {
     dependencies {
         testImplementation("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
         implementation("com.squareup.okhttp3:okhttp:${okHttpVersion}")
-        implementation 'com.alibaba.fastjson2:fastjson2-extension:2.0.21'
+        implementation("com.alibaba.fastjson2:fastjson2-extension:${fastjsonVersion}")
         implementation("cn.hutool:hutool-all:${hutoolVersion}")
         implementation("org.apache.commons:commons-lang3:${apacheLangVersion}")
         implementation 'io.github.openfeign:feign-okhttp:12.1'

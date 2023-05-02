@@ -2,8 +2,8 @@ buildscript {
     // 定义变量
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
-        springBootVersion = "3.0.5"
-        springCloudAlibabaVersion = "2022.0.0.0-RC1"
+        springBootVersion = "3.0.6"
+        springCloudAlibabaVersion = "2022.0.0.0-RC2"
         springCloudVersion = "4.0.2"
         okHttpVersion = "4.10.0"
         hutoolVersion = "5.8.17"
@@ -63,6 +63,7 @@ subprojects {
     dependencyManagement {
         imports {
             mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+            mavenBom "org.springframework.boot:spring-boot-starter-parent:${springBootVersion}"
         }
         dependencies {
             dependency("org.springframework.cloud:spring-cloud-loadbalancer:${springCloudVersion}")

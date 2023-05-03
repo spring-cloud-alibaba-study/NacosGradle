@@ -11,6 +11,7 @@ buildscript {
         lombokVersion = "1.18.26"
         redssionVersion = "3.20.1"
         fastjsonVersion = "2.0.27"
+        guavaVersion = "31.1-jre"
     }
     // 仓库地址
     repositories {
@@ -54,11 +55,11 @@ subprojects {
         implementation("cn.hutool:hutool-all:${hutoolVersion}")
         implementation("org.apache.commons:commons-lang3:${apacheLangVersion}")
         implementation 'io.github.openfeign:feign-okhttp:12.1'
-        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2022.0.0'
+        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2022.0.2'
         compileOnly("org.projectlombok:lombok:${lombokVersion}")
         implementation("org.projectlombok:lombok:${lombokVersion}")
         annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
-        implementation('com.google.guava:guava:31.1-jre')
+        implementation("com.google.guava:guava:${guavaVersion}")
     }
     dependencyManagement {
         imports {

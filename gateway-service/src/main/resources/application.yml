@@ -24,17 +24,16 @@ spring:
             - Path=/user/**    # 路由映射路径 这里注意，这个路径会追加到 service_id后
           filters:
             - StripPrefix=1  # 转发过滤前缀个数
+    openfeign:
+      okhttp:
+        enabled: true
+      httpclient:
+        enabled: false
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-
-feign:
-  okhttp:
-    enabled: true
-  httpclient:
-    enabled: false
 
 logging:
   config: classpath:logback-spring.xml

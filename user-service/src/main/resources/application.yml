@@ -6,13 +6,16 @@ spring:
         server-addr: 127.0.0.1:8848
     compatibility-verifier:
       enabled: false
+    openfeign:
+      okhttp:
+        enabled: true
+      httpclient:
+        enabled: false
   redis:
     redisson:
       file: classpath:application-redisson.yml
 server:
   tomcat:
-    # 该线程池可以容纳的最大线程数。默认值：200；
-    maxThreads: 300
     # 最大连接线程数，即：并发处理的最大请求数，默认值为 75
     maxConnections: 3000
     # 允许的最大连接数，应大于等于 maxProcessors ，默认值为 100
@@ -30,10 +33,5 @@ info:
   description: 黑大OA签到平台
   version: v1.0
   author: 技术部
-feign:
-  okhttp:
-    enabled: true
-  httpclient:
-    enabled: false
 #log4j:
 #  ignoreTCL: true

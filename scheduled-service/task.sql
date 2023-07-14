@@ -8,7 +8,8 @@ CREATE TABLE `sys_quartz`
     `quartz_status`   varchar(2)  DEFAULT NULL COMMENT '启动状态(0--启动1--停止)',
     `create_time`     datetime    DEFAULT NULL COMMENT '创建时间',
     `create_user`     varchar(32) DEFAULT NULL COMMENT '创建人',
-    `status`          tinyint(1) DEFAULT '0' COMMENT '状态（0--正常1--停用）',
-    `del_flag`        tinyint(1) DEFAULT '0' COMMENT '删除状态（0，正常，1已删除）',
+    `status`          tinyint(1)  DEFAULT '0' COMMENT '状态（0--正常1--停用）',
+    `del_flag`        tinyint(1)  DEFAULT '0' COMMENT '删除状态（0，正常，1已删除）',
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='定时任务信息表';
+) ENGINE = InnoDB
+  DEFAULT CHARSET = latin1 COMMENT ='定时任务信息表';

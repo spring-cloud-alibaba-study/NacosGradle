@@ -2,16 +2,23 @@ buildscript {
     // 定义变量
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
-        springBootVersion = "3.0.6"
+        springBootVersion = "3.1.1"
         springCloudAlibabaVersion = "2022.0.0.0-RC2"
-        springCloudVersion = "4.0.2"
-        okHttpVersion = "4.10.0"
-        hutoolVersion = "5.8.17"
+        springCloudVersion = "4.0.3"
+        okHttpVersion = "4.11.0"
+        hutoolVersion = "5.8.20"
         apacheLangVersion = "3.12.0"
-        lombokVersion = "1.18.26"
-        redssionVersion = "3.20.1"
-        fastjsonVersion = "2.0.27"
-        guavaVersion = "31.1-jre"
+        lombokVersion = "1.18.28"
+        redssionVersion = "3.23.0"
+        fastjsonVersion = "2.0.35"
+        guavaVersion = "32.1-jre"
+        springCloudDependenciesVersion = "2022.0.3"
+        feignOkHttpVersion = "12.4"
+        mybatisVersion = "3.0.2"
+        mysqlVersion = "8.0.33"
+        easyexcelVersion = "3.3.2"
+        commonsCsvVersion = "1.10.0"
+        hibernateValidator = "8.0.1.Final"
     }
     // 仓库地址
     repositories {
@@ -43,8 +50,6 @@ subprojects {
     apply plugin: 'idea'
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
-//    sourceCompatibility = 1.8
-//    targetCompatibility = 1.8
     // 指定编码格式
     [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
     version = "1.0.0-SNAPSHOT"  // 开发版本： -SNAPSHOT 正式版本：.RELEASE
@@ -54,8 +59,8 @@ subprojects {
         implementation("com.alibaba.fastjson2:fastjson2-extension:${fastjsonVersion}")
         implementation("cn.hutool:hutool-all:${hutoolVersion}")
         implementation("org.apache.commons:commons-lang3:${apacheLangVersion}")
-        implementation 'io.github.openfeign:feign-okhttp:12.1'
-        runtimeOnly 'org.springframework.cloud:spring-cloud-dependencies:2022.0.2'
+        implementation("io.github.openfeign:feign-okhttp:${feignOkHttpVersion}")
+        runtimeOnly("org.springframework.cloud:spring-cloud-dependencies:${springCloudDependenciesVersion}")
         compileOnly("org.projectlombok:lombok:${lombokVersion}")
         implementation("org.projectlombok:lombok:${lombokVersion}")
         annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
@@ -72,6 +77,11 @@ subprojects {
             dependency("org.springframework.cloud:spring-cloud-starter-openfeign:${springCloudVersion}")
             dependency("org.springframework.cloud:spring-cloud-starter-gateway:${springCloudVersion}")
             dependency("org.redisson:redisson-spring-boot-starter:${redssionVersion}")
+            dependency("org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}")
+            dependency("mysql:mysql-connector-java:${mysqlVersion}")
+            dependency("com.alibaba:easyexcel:${easyexcelVersion}")
+            dependency("org.apache.commons:commons-csv:${commonsCsvVersion}")
+            dependency("org.hibernate.validator:hibernate-validator:${hibernateValidator}")
         }
 
     }

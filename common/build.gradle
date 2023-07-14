@@ -3,9 +3,9 @@ repositories {
 }
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'com.alibaba:easyexcel:3.2.1'
-    implementation 'org.apache.commons:commons-csv:1.9.0'
-    implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+    implementation 'com.alibaba:easyexcel'
+    implementation 'org.apache.commons:commons-csv'
+    implementation 'org.hibernate.validator:hibernate-validator'
 }
 jar.enabled = true
 description = 'common'

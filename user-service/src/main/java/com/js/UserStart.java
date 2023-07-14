@@ -9,7 +9,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * @Description 启动类
  * @Author jishubu
- * @ComponentScan 测试开发时开启注解可以运行swagger
  */
 @SpringBootApplication
 @EnableDiscoveryClient

@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @Description 网关启动类
- * @EnableZuulProxy 网关注解
+ * @EnableDiscoveryClient 网关注解
  * @Author jishubu
  */
 @Slf4j

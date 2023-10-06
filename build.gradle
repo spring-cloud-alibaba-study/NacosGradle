@@ -2,7 +2,7 @@ buildscript {
     // 定义变量
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
-        springBootVersion = "3.1.1"
+        springBootVersion = "3.1.2"
         springCloudAlibabaVersion = "2022.0.0.0"
         springCloudVersion = "4.0.3"
         okHttpVersion = "4.11.0"

@@ -21,3 +21,5 @@ test-classes/
 out/
 target
 .factorypath
+gradlew
+gradlew.bat

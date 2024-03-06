@@ -2,21 +2,21 @@ buildscript {
     // 定义变量
     ext {
         ALI_REPOSITORY_URL = "https://maven.aliyun.com/repository/public/"
-        springBootVersion = "3.1.2"
-        springCloudAlibabaVersion = "2022.0.0.0"
-        springCloudVersion = "4.0.3"
-        okHttpVersion = "4.11.0"
-        hutoolVersion = "5.8.20"
-        apacheLangVersion = "3.12.0"
-        lombokVersion = "1.18.28"
-        redssionVersion = "3.23.0"
-        fastjsonVersion = "2.0.35"
-        guavaVersion = "32.1.1-jre"
-        springCloudDependenciesVersion = "2022.0.3"
-        feignOkHttpVersion = "12.4"
-        mybatisVersion = "3.0.2"
-        mysqlVersion = "8.0.33"
-        easyexcelVersion = "3.3.2"
+        springBootVersion = "3.2.3"
+        springCloudAlibabaVersion = "2023.0.0.0-RC1"
+        springCloudVersion = "4.1.0"
+        okHttpVersion = "4.12.0"
+        hutoolVersion = "5.8.26"
+        apacheLangVersion = "3.14.0"
+        lombokVersion = "1.18.30"
+        redssionVersion = "3.27.1"
+        fastjsonVersion = "2.0.47"
+        guavaVersion = "33.0.0-jre"
+        springCloudDependenciesVersion = "2023.0.0"
+        feignOkHttpVersion = "13.2.1"
+        mybatisVersion = "3.0.3"
+        mysqlVersion = "8.3.0"
+        easyexcelVersion = "3.3.3"
         commonsCsvVersion = "1.10.0"
         hibernateValidator = "8.0.1.Final"
     }
@@ -78,7 +78,7 @@ subprojects {
             dependency("org.springframework.cloud:spring-cloud-starter-gateway:${springCloudVersion}")
             dependency("org.redisson:redisson-spring-boot-starter:${redssionVersion}")
             dependency("org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}")
-            dependency("mysql:mysql-connector-java:${mysqlVersion}")
+            dependency("com.mysql:mysql-connector-j:${mysqlVersion}")
             dependency("com.alibaba:easyexcel:${easyexcelVersion}")
             dependency("org.apache.commons:commons-csv:${commonsCsvVersion}")
             dependency("org.hibernate.validator:hibernate-validator:${hibernateValidator}")

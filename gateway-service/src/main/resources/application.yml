@@ -3,6 +3,8 @@ spring:
     nacos:
       discovery:
         serverAddr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
     gateway:
       discovery:
         locator:
@@ -35,5 +37,9 @@ management:
       exposure:
         include: '*'
 
+server:
+  servlet:
+    encoding:
+     charset: UTF-8
 logging:
   config: classpath:logback-spring.xml
